@@ -19,7 +19,7 @@ Casual Reader transitioning into a digital library user
 | Main Question | "Does this book exist?" | "Can I actually read it?" | "How do I borrow it?" | "How do I open it?"           | "Is this experience good?" | "Where is my book now?" |
 
 ## Detailed User Journey
-<img src="User Journey - User Journey Map — Open Library.jpg">
+![User Journey Map](/img/user-journey/map.jpg)
 
 ### 1. Discover
 
@@ -260,8 +260,9 @@ Different concepts are mixed:
 Create a personal dashboard.
 
 ## Emotional Journey Map
-<img src="User Journey - Emotional Journey Curve.jpg">
-<img src="User Journey - Three Biggest Friction Points.jpg">
+
+![Emotional Journey Curve](/img/user-journey/emotional-curve.jpg)
+![Three Biggest Friction Points](/img/user-journey/biggest-friction-points.jpg)
 
 **Biggest Friction Points**
 
@@ -315,6 +316,6 @@ Improve personal library.
 | Digital quality indicators    | Better expectations     | Higher satisfaction         |
 | Guided onboarding             | Faster first success    | Lower abandonment           |
 
-<img src="User Journey - Key UX Opportunities.jpg">
+![Key UX Opportunities](/img/user-journey/key-ux-opportunities.jpg)
 
 [Diagram in Miro](https://miro.com/app/live-embed/uXjVH6pKkQ0=/?embedMode=view_only_without_ui&moveToViewport=17006%2C786%2C18401%2C9876&embedId=492414186818)
