@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # User Journey Map — Open Library Reading Experience
 
 ## Journey Scope
@@ -319,3 +323,4 @@ Improve personal library.
 ![Key UX Opportunities](/img/user-journey/key-ux-opportunities.jpg)
 
 [Diagram in Miro](https://miro.com/app/live-embed/uXjVH6pKkQ0=/?embedMode=view_only_without_ui&moveToViewport=17006%2C786%2C18401%2C9876&embedId=492414186818)
+

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Research
 
 Diagrams represents understanding using [Borrowing Books Through Open Library](https://openlibrary.org/help/faq/borrow) as source.

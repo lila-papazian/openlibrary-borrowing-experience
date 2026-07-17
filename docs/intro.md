@@ -1,5 +1,8 @@
 ---
 slug: /
+
+sidebar_position: 0
+
 ---
 # Rethinking the OpenLibrary Borrowing Experience
 

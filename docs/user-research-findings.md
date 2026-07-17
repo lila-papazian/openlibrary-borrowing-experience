@@ -1,4 +1,8 @@
-User Research Findings — Open Library / Internet Archive
+---
+sidebar_position: 2
+---
+
+User Research Findings
 ========================================================
 
 Research Topic
