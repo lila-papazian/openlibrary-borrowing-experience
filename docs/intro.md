@@ -35,19 +35,8 @@ The goal is to understand the domain first, identify real user pain points, docu
 
 ```text
 docs/
-research/
 prototype/
-assets/
-content/
 ```
-
-## Current Status
-
-🟡 Research
-
-Current milestone:
-
-> Understand the borrowing domain before proposing any interface changes.
 
 ## Project Rules
 

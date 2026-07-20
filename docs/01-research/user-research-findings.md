@@ -8,12 +8,12 @@ User Research Findings
 Research Topic
 --------------
 
-**Understanding reader pain points when discovering, borrowing, accessing, and managing books through Open Library and Internet Archive.**
+Understanding reader pain points when discovering, borrowing, accessing, and managing books through Open Library and Internet Archive.
 
 Research Question
 -----------------
 
-**How do readers discover, borrow, access, and manage books through Open Library, and where does the experience break down?**
+How do readers discover, borrow, access, and manage books through Open Library, and where does the experience break down?
 
 1\. Executive Summary
 =====================
@@ -29,38 +29,35 @@ The current experience exposes library concepts such as lending models, availabi
 The biggest gaps appear between:
 
 *   Discovery and access
-    
 *   Borrowing and reading
-    
 *   Digital availability and device compatibility
-    
 *   Personal collections and library management
-    
+
+## Scope Decision (2026-07-18)
+
+Narrowing this to the **Discover → Evaluate → Borrow** moment — the confusion between finding a book and actually starting a loan. That's where the two worst pain points sit in the matrix below (unclear availability, borrowing workflow confusion).
+
+Device compatibility, digital quality, and personal library management are parked, not solved. Still documented below, just not in scope for design or prototyping right now.
 
 Research Sources
 ================
+
+> **Note:** the Reddit discussions listed below are from an early draft and could not be verified — see [Sources](./sources.md) for what's actually confirmed (official documentation, GitHub issues, and a first-hand usability walkthrough). Don't cite the Reddit list below as evidence.
 
 Community Discussions
 ---------------------
 
 *   Reddit — YA Literature discussion about Open Library borrowing experiences
-    
 *   Reddit — Internet Archive/Open Library borrowable books discussion
-    
 *   Reddit — LibGen discussion about downloading books from Open Library
-    
 *   Reddit — Internet Archive discussion about unavailable books
-    
 *   Reddit — LibGen discussion about downloading from Archive.org
-    
 *   Reddit — Kobo discussion about using Open Library/Internet Archive
-    
 
 Product Documentation
 ---------------------
 
 *   Open Library Blog — New Features category
-    
 
 Key User Pain Points
 ====================
@@ -76,17 +73,11 @@ Users frequently discover books but cannot understand why they cannot borrow or 
 A book may appear in search results but have different states:
 
 *   Available for borrowing
-    
 *   Available for limited borrowing
-    
 *   Read online only
-    
 *   Preview only
-    
 *   Catalog record only
-    
 *   Available elsewhere
-    
 
 The interface does not always communicate these differences clearly.
 
@@ -126,20 +117,13 @@ User Need
 Users need immediate clarity about:
 
 *   Can I read this?
-    
 *   Can I borrow this?
-    
 *   How long can I access it?
-    
-*   What device can I use?
-    
 
 Opportunity
 -----------
 
-Introduce clearer availability indicators:
-
-Example:
+This is the pain point behind States 1, 3, and 5 in [Content & State Model](../content-state-model.md) — Read Online, Currently Unavailable, and Not Digitized. Early sketch, before those states were refined:
 
 The Hobbit
 
@@ -152,7 +136,7 @@ or
 
 or
 
-⚪ Catalog record only`
+⚪ Catalog record only
 
 2\. Borrowing Restrictions Create Friction
 ==========================================
@@ -165,58 +149,32 @@ Users become frustrated when books exist digitally but are limited by lending ru
 Common issues:
 
 *   Short borrowing periods
-    
 *   Waiting lists
-    
 *   Limited simultaneous access
-    
 *   Confusion around controlled digital lending
-    
 
 User Pain Point
 ---------------
 
 > "I can access the book, but not in the way I need."
 
-Different users have different goals:
-
-### Casual Reader
-
- >"I want to read this once."
-
-### Student
-
-> "I need this textbook throughout the semester."
-
-### Researcher
-
-> "I need reliable access and citations."
-
-The platform provides the same borrowing model for different user needs.
+The platform's lending rules (loan length, waitlist eligibility) aren't communicated before the user commits to borrowing — the friction isn't the rules themselves, it's discovering them after the fact.
 
 User Need
 ---------
 
-Users need borrowing experiences adapted to intent.
+Users need loan terms — length, and whether a waitlist applies — stated *before* they click Borrow, not discovered afterward.
 
 Opportunity
 -----------
 
-Support reading goals:
-
-Why are you accessing this book?
-
-○ Casual reading
-
-○ Studying
-
-○ Research
-
-○ Reference
+This is the pain point directly behind two of the states built out in [Content & State Model](../content-state-model.md): **State 2 (Borrow Available)** states loan length upfront instead of after commitment, and **State 4 (Join Waitlist)** surfaces position and estimated wait instead of a bare "join waitlist" button. (See [Decision Log](../decision-log.md#2026-07-19--rewrote-pain-point-2) for what this section originally said and why it changed.)
 
 
 3\. E-reader Integration Is Too Complex
 =======================================
+
+**Status:** ⏸ Out of scope for this phase — see [Scope Decision](#scope-decision-2026-07-18).
 
 Observation
 -----------
@@ -226,15 +184,10 @@ Users attempting to read borrowed books on devices such as Kobo experience techn
 Problems include:
 
 *   DRM confusion
-    
 *   File compatibility
-    
 *   EPUB issues
-    
 *   Required external software
-    
 *   Device transfer problems
-    
 
 User Pain Point
 ---------------
@@ -286,19 +239,17 @@ Continue reading
 4\. Digital Book Quality Problems
 =================================
 
+**Status:** ⏸ Out of scope for this phase — see [Scope Decision](#scope-decision-2026-07-18).
+
 Observation
 -----------
 
 Users report issues with:
 
 *   Poor EPUB formatting
-    
 *   OCR mistakes
-    
 *   Low-quality scans
-    
 *   Difficult reading experiences
-    
 
 This especially affects older and archival books.
 
@@ -315,17 +266,7 @@ Users need confidence that a digital edition is usable before opening it.
 Opportunity
 -----------
 
-Add book quality indicators:
-
-Example:
-
-Digital Edition Quality
-
-Text accuracy: ★★★★★
-
-Formatting: ★★★★☆
-
-Scan quality: ★★★★★  `
+Communicate digital edition quality before the user commits to opening it. The specific mechanism (rating system, flags, sample preview, etc.) is a design decision to be evaluated during prototyping, not a finding from this research phase.
 
 5\. Borrowing Workflow Is Difficult To Understand
 =================================================
@@ -336,13 +277,9 @@ Observation
 Users repeatedly ask:
 
 *   How do I borrow?
-    
 *   Why can't I download?
-    
 *   Why is there no borrow button?
-    
 *   How do I read on my device?
-    
 
 This suggests the workflow requires previous library knowledge.
 
@@ -357,22 +294,17 @@ Root Cause
 Users must understand concepts such as:
 
 *   Controlled digital lending
-    
 *   Loans
-    
 *   DRM
-    
 *   Formats
-    
 *   Availability rules
-    
 
 These concepts are invisible to experienced library users but confusing for new users.
 
 Opportunity
 -----------
 
-Add contextual guidance:
+This is the pain point behind States 2 and 4 in [Content & State Model](../content-state-model.md) — stating loan terms and waitlist position before commitment, instead of after.
 
 Example:
 
@@ -384,10 +316,10 @@ You can:
 
 ✓ Read in browser
 
-✓ Download with supported software
-
 6\. Discovery Is Better Than Management
 =======================================
+
+**Status:** ⏸ Out of scope for this phase — see [Scope Decision](#scope-decision-2026-07-18).
 
 Observation
 -----------
@@ -395,15 +327,10 @@ Observation
 Open Library has introduced improvements around:
 
 *   Search
-    
 *   Reading logs
-    
 *   Lists
-    
 *   Recommendations
-    
 *   Want-to-read functionality
-    
 
 These improvements suggest historical problems around discovery and organization.
 
@@ -418,16 +345,14 @@ User Need
 Users need better ways to:
 
 *   Save books
-    
 *   Track progress
-    
 *   Organize collections
-    
 *   Return to books later
-    
 
 7\. Personal Library Organization Is Confusing
 ==============================================
+
+**Status:** ⏸ Out of scope for this phase — see [Scope Decision](#scope-decision-2026-07-18).
 
 Observation
 -----------
@@ -435,15 +360,10 @@ Observation
 Users have different categories of books:
 
 *   Borrowed
-    
 *   Want to read
-    
 *   Currently reading
-    
 *   Finished
-    
 *   Saved lists
-    
 
 These categories are not always clearly separated.
 
@@ -463,10 +383,12 @@ Borrowed Books
 Want To Read  
 Finished  
 Collections  
-Reading History   `
+Reading History
 
 User Personas
 =============
+
+Two personas are developed in depth because they map directly onto the highest-frequency, highest-severity pain points identified above (unclear availability, borrowing workflow confusion). Other user types (e.g. e-reader owners, archival/rare-book researchers) surface in the source discussions but with lower frequency and are treated as **out of scope** for this phase — worth revisiting only if later evidence shows their needs diverge meaningfully from these two.
 
 Persona 1 — The Casual Reader
 =============================
@@ -480,28 +402,22 @@ Behaviors
 ---------
 
 *   Searches for specific titles
-    
 *   Wants immediate access
-    
 *   Does not want technical explanations
-    
 
 Frustrations
 ------------
 
 *   Cannot understand availability
-    
 *   Too many steps
-    
 *   Confusing actions
-    
 
 Needs
 -----
 
 A simple path:
 
-Find → Borrow → Read   `
+Find → Borrow → Read
 
 Persona 2 — The Student / Researcher
 ====================================
@@ -515,205 +431,90 @@ Behaviors
 ---------
 
 *   Needs reliable access
-    
 *   Reads for longer periods
-    
 *   Requires notes and references
-    
 
 Frustrations
 ------------
 
 *   Loan expiration
-    
 *   Limited access
-    
 *   Difficulty using books offline
-    
 
 Needs
 -----
 
 Long-term access and research-friendly tools.
 
-Persona 3 — The E-reader Owner
-==============================
-
-Goal
-----
-
-Read books on dedicated devices.
-
-Behaviors
----------
-
-*   Uses Kobo, Kindle, or similar devices
-    
-*   Expects digital compatibility
-    
-
-Frustrations
-------------
-
-*   DRM workflows
-    
-*   File formats
-    
-*   Manual transfers
-    
-
-Needs
------
-
-One-click device integration.
-
-Persona 4 — The Library Enthusiast
-==================================
-
-Goal
-----
-
-Discover rare and historical books.
-
-Behaviors
----------
-
-*   Explores collections
-    
-*   Searches unusual titles
-    
-*   Values preservation
-    
-
-Frustrations
-------------
-
-*   Metadata inconsistencies
-    
-*   Scan quality
-    
-*   Unclear availability
-    
-
-Needs
------
-
-Better archival information.
-
 Prioritized Pain Point Matrix
 =============================
 
-| Pain Point                    | Frequency | Severity | Opportunity                     |
-| ----------------------------- | --------- | -------- | ------------------------------- |
-| Unclear availability status   | High      | High     | Redesign book status indicators |
-| Borrowing workflow confusion  | High      | High     | Add guided onboarding           |
-| Device compatibility problems | Medium    | High     | Improve reading integrations    |
-| Digital format quality        | Medium    | Medium   | Add quality indicators          |
-| Personal library organization | Medium    | Medium   | Improve library dashboard       |
-| Search and discovery          | Medium    | Medium   | Improve recommendations         |
+| Pain Point                    | Frequency | Severity | Opportunity                     | Scope |
+| ----------------------------- | --------- | -------- | -------------------------------- | ----- |
+| Unclear availability status   | High      | High     | Redesign book status indicators | ✅ Active |
+| Borrowing workflow confusion  | High      | High     | Add guided onboarding           | ✅ Active |
+| Device compatibility problems | Medium    | High     | Improve reading integrations    | ⏸ Parked |
+| Digital format quality        | Medium    | Medium   | Add quality indicators          | ⏸ Parked |
+| Personal library organization | Medium    | Medium   | Improve library dashboard       | ⏸ Parked |
+| Search and discovery          | Medium    | Medium   | Improve recommendations         | ⏸ Parked |
 
 
-Research Insights
+Key Findings
 =================
 
-Insight 1
----------
+Three patterns show up across the pain points above. Stating each once, as a hypothesis, instead of repeating it three times as an "insight," a "job to be done," and a "hypothesis."
 
-Readers think about access, not lending models.
------------------------------------------------
+1\. Readers think about access, not lending models
+---------------------------------------------------
 
-### Problem Statement
+**Problem:** current experiences expose library complexity (loan types, DRM, formats) instead of user outcomes (can I read this, and how).
 
-Users need to understand how they can access a book immediately because current experiences expose library complexity instead of user outcomes.
+**Job to be done:** "When I discover a book, I want to immediately know whether I can access it, so I can decide whether to invest time."
 
-Insight 2
----------
+**Hypothesis:** if availability states are clearer, users will spend less time searching for access options.
 
-Borrowing is only one step in the reading journey.
---------------------------------------------------
+*(This is the reasoning behind States 1, 3, and 5 in [Content & State Model](../content-state-model.md).)*
 
-### Problem Statement
+2\. Borrowing is only one step in the reading journey
+---------------------------------------------------------
 
-Users need a seamless path from discovery to reading because technical barriers after borrowing prevent successful completion of their goal.
+**Status:** ⏸ Out of scope for this phase.
 
-Insight 3
----------
+**Problem:** technical barriers after borrowing (DRM, device setup, format conversion) get in the way of the actual goal — reading. This is about what happens after a successful loan, outside the current scope. Kept here, not being worked on.
 
-Open Library combines multiple experiences into one interface.
---------------------------------------------------------------
+**Hypothesis (parked):** if device setup is simplified, more borrowed books will become completed reads.
 
-### Problem Statement
+3\. Open Library exposes catalog concepts instead of a simple find-and-borrow path
+--------------------------------------------------------------------------------------
 
-Users need clearer separation between:
+**Problem:** between finding a book and having it in hand, users have to interpret concepts (edition, loan type, waitlist, availability state) that the interface doesn't translate into a simple yes/no answer.
 
-*   Finding books
-    
-*   Borrowing books
-    
-*   Reading books
-    
-*   Managing books
-    
+**Hypothesis:** if the path from finding a book to borrowing it surfaces one clear next action instead of catalog concepts, fewer users will abandon before completing a loan.
 
-Recommended Next Research Steps
+*(This is the reasoning behind all six states in [Content & State Model](../content-state-model.md) — each one replaces a catalog concept with a plain-language answer to what the user actually wants to know.)*
+
+*(Managing and reading books once borrowed — the second half of the original insight — is parked along with the rest of the post-borrow scope above.)*
+
+Recommended Next Research Step
 ===============================
 
-1\. Create User Journey Map
----------------------------
+~~Create a User Journey Map~~ — done, see [User Journey Map](../02-user-models/user-journey-map.md). Content model, Figma wireframes, and a React prototype followed from it.
 
-Map the complete experience:
-
-Discover -> Evaluate -> Borrow -> Access -> Read -> Manage Library
-
-
-Identify:
-
-*   User actions
-    
-*   Emotional states
-    
-*   Friction points
-    
-*   Opportunities
-    
-
-2\. Define Jobs To Be Done
---------------------------
-
-Examples:
-
-> "When I discover a book, I want to immediately know whether I can access it, so I can decide whether to invest time."
-
-> "When I borrow a book, I want to read it on my preferred device, so I can continue my reading habit."
-
-3\. Create UX Hypotheses
-------------------------
-
-Examples:
-
-### Hypothesis 1
-
-If availability states are clearer, users will spend less time searching for access options.
-
-### Hypothesis 2
-
-If device setup is simplified, more borrowed books will become completed reads.
-
-### Hypothesis 3
-
-If personal library organization improves, users will return more frequently.
+Next up: usability testing of the wireframed states with real readers. Haven't done this yet.
 
 Final Research Summary
 ======================
 
-The main opportunity is not simply improving book discovery.
+The opportunity isn't just improving discovery.
 
-The larger opportunity is reducing the gap between:
+Within this project's scope, it's closing the gap between:
 
 **"I found a book"**
 
 and
 
-**"I successfully read the book."**
+**"I successfully started borrowing it."**
 
-Open Library already provides a valuable collection. The strongest UX opportunity lies in making access, borrowing, reading, and organization feel like one continuous experience instead of separate library systems.
+Open Library already has a valuable collection. The real opportunity in this moment is making availability and loan terms clear *before* the user commits, not after.
+
+The bigger ambition — one continuous experience across discovery, reading, and personal library management — is real, but that's exactly what the [Scope Decision](#scope-decision-2026-07-18) above parked. This is what this phase actually set out to do, not the full product vision.

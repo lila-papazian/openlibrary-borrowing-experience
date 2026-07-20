@@ -14,11 +14,15 @@ User goal:
 
 Casual Reader transitioning into a digital library user
 
-(Insights also apply to students, researchers, and e-reader users.)
+(Insights also apply to students and researchers — see [Findings](../01-research/user-research-findings.md#user-personas).)
+
+### Scope (2026-07-18)
+
+Active focus right now: **Discover → Evaluate → Borrow**, matching the scope decision in [Findings](../01-research/user-research-findings.md#scope-decision-2026-07-18). Access/Setup, Read, and Manage Library stages are still documented below, just parked.
 
 ## Overview
 | Stage         | Discover                | Evaluate                  | Borrow                | Access                        | Read                       | Manage                  |
-| ------------- | ----------------------- | ------------------------- | --------------------- | ----------------------------- | -------------------------- | ----------------------- |
+| ------------- | ----------------------- | ------------------------- | ---------------------- | ----------------------------- | ---------------------------- | ------------------------ |
 | User Goal     | Find a book             | Understand availability   | Get access            | Open book on preferred device | Enjoy reading              | Keep track of books     |
 | Main Question | "Does this book exist?" | "Can I actually read it?" | "How do I borrow it?" | "How do I open it?"           | "Is this experience good?" | "Where is my book now?" |
 
@@ -51,11 +55,7 @@ Casual Reader transitioning into a digital library user
 
 **Pain Points**
 
-Search ambiguity, users may find:
-- Multiple editions
-- Different formats
-- Old records
-- Incomplete metadata
+Search ambiguity — users may find multiple editions, different formats, old records, or incomplete metadata. (Not covered in Findings; specific to the discovery step.)
 
 **Opportunity**
 
@@ -93,21 +93,11 @@ How do I read it?
 
 **Pain Points**
 
-Availability status is unclear
-
-Users encounter different states:
-- Available
-- Borrowable
-- Preview only
-- Read online
-- Catalog only
-- Unavailable
-
-The difference is not always obvious.
+See [Users Do Not Understand Book Availability](../01-research/user-research-findings.md#1-users-do-not-understand-book-availability) in Findings.
 
 **Opportunity**
 
-Create a clear availability component.
+Create a clear availability component — see States 1, 3, and 5 in [Content & State Model](../content-state-model.md) for what this actually became.
 
 ### 3. Borrow
 
@@ -131,21 +121,15 @@ A simple borrowing process.
 
 **Pain Points**
 
-Library rules are invisible until needed
-
-Users discover
-- Loan limits
-- Waiting lists
-- DRM restrictions
-- Different borrowing models
-
-after they already committed.
+See [Borrowing Restrictions Create Friction](../01-research/user-research-findings.md#2-borrowing-restrictions-create-friction) and [Borrowing Workflow Is Difficult To Understand](../01-research/user-research-findings.md#5-borrowing-workflow-is-difficult-to-understand) in Findings.
 
 **Opportunity**
 
-Explain before borrowing.
+Explain before borrowing — see States 2 and 4 in [Content & State Model](../content-state-model.md) for what this actually became.
 
 ### 4. Access / Setup
+
+**Status:** ⏸ Parked — out of scope for this phase.
 
 **User Actions**
 - Opens reader
@@ -167,22 +151,7 @@ A direct path to reading.
 
 **Pain Points**
 
-Biggest friction point.
-
-Current experience:
-Borrow
- ↓
-Download
- ↓
-Understand DRM
- ↓
-Install software
- ↓
-Convert
- ↓
-Transfer
- ↓
-Read
+Biggest friction point in the journey. See [E-reader Integration Is Too Complex](../01-research/user-research-findings.md#3-e-reader-integration-is-too-complex) in Findings.
 
 **Opportunity**
 
@@ -196,6 +165,8 @@ Where do you want to read?
 Then provide the correct workflow.
 
 ### 5. Read
+
+**Status:** ⏸ Parked — out of scope for this phase.
 
 **User Actions**
 - Reads online
@@ -218,18 +189,17 @@ Depends on quality:
 - Stable reading experience
 - Remembered progress
 
-**Pain Points** 
+**Pain Points**
 
-Digital quality varies:
-- OCR mistakes
-- Poor scans
-- Broken EPUB layouts
+See [Digital Book Quality Problems](../01-research/user-research-findings.md#4-digital-book-quality-problems) in Findings.
 
 **Opportunity**
 
 Show quality information.
 
 ### 6. Manage Library
+
+**Status:** ⏸ Parked — out of scope for this phase.
 
 **User Actions**
 - Saves books
@@ -253,11 +223,7 @@ A personal reading space.
 
 **Pain Points**
 
-Different concepts are mixed:
-- Borrowed books
-- Saved books
-- Want-to-read
-- Reading history
+See [Discovery Is Better Than Management](../01-research/user-research-findings.md#6-discovery-is-better-than-management) and [Personal Library Organization Is Confusing](../01-research/user-research-findings.md#7-personal-library-organization-is-confusing) in Findings.
 
 **Opportunity**
 
@@ -270,7 +236,7 @@ Create a personal dashboard.
 
 **Biggest Friction Points**
 
-## 1. Before Borrowing
+## 1. Before Borrowing — ✅ Active scope
 
 **Problem**
 
@@ -284,7 +250,8 @@ High abandonment risk.
 
 Clear availability information.
 
-## 2. After Borrowing
+## 2. After Borrowing — ⏸ Parked
+
 **Problem**
 
 Borrowing does not guarantee successful reading.
@@ -297,7 +264,7 @@ Users fail at the main goal.
 
 Simplify device access.
 
-## 3. After Reading
+## 3. After Reading — ⏸ Parked
 
 **Problem**
 
@@ -312,15 +279,14 @@ Lower retention.
 Improve personal library.
 
 ## Key UX Opportunities
-| Opportunity                   | User Impact             | Business/Product Impact     |
-| ----------------------------- | ----------------------- | --------------------------- |
-| Clear availability states     | Reduces confusion       | Higher successful borrowing |
-| Device-specific reading flows | Less technical friction | More completed reads        |
-| Better personal library       | Better retention        | More returning users        |
-| Digital quality indicators    | Better expectations     | Higher satisfaction         |
-| Guided onboarding             | Faster first success    | Lower abandonment           |
+| Opportunity                   | User Impact             | Business/Product Impact     | Scope |
+| ------------------------------ | ------------------------- | ----------------------------- | ----- |
+| Clear availability states     | Reduces confusion       | Higher successful borrowing | ✅ Active |
+| Guided onboarding             | Faster first success    | Lower abandonment           | ✅ Active |
+| Device-specific reading flows | Less technical friction | More completed reads        | ⏸ Parked |
+| Digital quality indicators    | Better expectations     | Higher satisfaction         | ⏸ Parked |
+| Better personal library       | Better retention        | More returning users        | ⏸ Parked |
 
 ![Key UX Opportunities](/img/user-journey/key-ux-opportunities.jpg)
 
 [Diagram in Miro](https://miro.com/app/live-embed/uXjVH6pKkQ0=/?embedMode=view_only_without_ui&moveToViewport=17006%2C786%2C18401%2C9876&embedId=492414186818)
-
